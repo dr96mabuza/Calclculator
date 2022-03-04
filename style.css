@@ -1,0 +1,51 @@
+#Numbers {
+    display: grid;
+    grid-template-columns: 44px 44px 44px;/*set number of grid and size*/
+    min-height: 173.6px;
+}
+
+#container2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#signs {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+#screen {
+    border: 2px;
+    border-color: blanchedalmond;
+    border-style: groove;
+    width: 160px;
+    height: auto;
+}
+
+#display, .answer, .operator {
+    height: 20px;
+}
+
+/* {
+    border: 1px;
+    border-color: bisque;
+    border-style: dashed;
+}*/
