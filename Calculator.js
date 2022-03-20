@@ -36,13 +36,13 @@ function divide(num1, num2) {
 
 function operate(num1, num2, op) {
     if (op === "+"){
-        value.innerHTML = add(num1, num2);
+        value.textContent = add(num1, num2);
     } else if (op === "-"){
-        value.innerHTML = subtract(num1, num2);
+        value.textContent = subtract(num1, num2);
     } else if (op === "*"){
-        value.innerHTML = multiply(num1, num2);
+        value.textContent = multiply(num1, num2);
     } else if (op === "/"){
-        value.innerHTML = divide(num1, num2);
+        value.textContent = divide(num1, num2);
     }
 }
 
@@ -59,25 +59,25 @@ buttons.forEach(button => {
 //saves display value in local storage
 const value = document.querySelector('.answer');
 function saveData() {
-    localStorage.setItem('.answer',value.innerHTML);
+    localStorage.setItem('.answer',value.textContent);
 };
 
 //recall display value
 const selected = document.querySelector('.selected');
 function restoreData() {
-    selected.innerHTML = localStorage.getItem('.answer',value.innerHTML);
-    value.innerHTML = '';
+    selected.textContent = localStorage.getItem('.answer',value.innerHTML);
+    value.textContent = '';
 }
 
 const del = document.querySelector('.clear');
 del.addEventListener('click', () => {
-    value.innerHTML = "";
+    value.textContent = "";
 });
 
 function clearScreen() {
-    value.innerHTML = '';
-    selected.innerHTML = '';
-    operator.innerHTML = '';
+    value.textContent = '';
+    selected.textContent = '';
+    operator.textContent = '';
 }
 
 const clear = document.querySelector('.clearAll');
@@ -86,9 +86,9 @@ clear.addEventListener('click', () => {
 });
 
 function equal() {
-    operate(selected.innerHTML, value.innerHTML, operator.innerHTML);
-    selected.innerHTML = '';
-    operator.innerHTML = '';
+    operate(selected.textContent, value.textContent, operator.textContent);
+    selected.textContent = '';
+    operator.textContent = '';
 
 }
 
@@ -102,15 +102,15 @@ Equal.addEventListener('click', () => {
 const operator = document.querySelector('.operator');
 
 function ADDITION() {
-    if(operator.innerHTML === '') {
-        selected.innerHTML = value.innerHTML;
-        value.innerHTML = '';
-        operator.innerHTML = '+';
+    if(operator.textContent === '') {
+        selected.textContent = value.textContent;
+        value.textContent = '';
+        operator.textContent = '+';
     } else {
         equal();
-        selected.innerHTML = value.innerHTML;
-        value.innerHTML = '';
-        operator.innerHTML = '+';
+        selected.textContent = value.textContent;
+        value.textContent = '';
+        operator.textContent = '+';
     }
 }
 
@@ -120,15 +120,15 @@ Addition.addEventListener('click', () => {
 });
 
 function SUB() {
-    if (operator.innerHTML === '') {
-        selected.innerHTML = value.innerHTML;
-        value.innerHTML = '';
-        operator.innerHTML = '-';
+    if (operator.textContent === '') {
+        selected.textContent = value.textContent;
+        value.textContent = '';
+        operator.textContent = '-';
     } else {
         equal();
-        selected.innerHTML = value.innerHTML;
-        value.innerHTML = '';
-        operator.innerHTML = '-';
+        selected.textContent = value.textContent;
+        value.textContent = '';
+        operator.textContent = '-';
     }
 }
 
@@ -138,15 +138,15 @@ Sub.addEventListener('click', () => {
 });
 
 function DIVIDE() {
-    if (operator.innerHTML === ''){
-        selected.innerHTML = value.innerHTML;
-        value.innerHTML = '';
-        operator.innerHTML = '/';
+    if (operator.textContent === ''){
+        selected.textContent = value.textContent;
+        value.textContent = '';
+        operator.textContent = '/';
     } else {
         equal();
-        selected.innerHTML = value.innerHTML;
-        value.innerHTML = '';
-        operator.innerHTML = '/';
+        selected.textContent = value.textContent;
+        value.textContent = '';
+        operator.textContent = '/';
     }
 }
 
@@ -156,15 +156,15 @@ Divide.addEventListener('click', () => {
 });
 
 function MULT() {
-    if(operator.innerHTML === '') {
-        selected.innerHTML = value.innerHTML;
-        value.innerHTML = '';
-        operator.innerHTML = '*';
+    if(operator.textContent === '') {
+        selected.textContent = value.textContent;
+        value.textContent = '';
+        operator.textContent = '*';
     } else {
         equal();
-        selected.innerHTML = value.innerHTML;
-        value.innerHTML = '';
-        operator.innerHTML = '*';
+        selected.textContent = value.textContent;
+        value.textContent = '';
+        operator.textContent = '*';
     }
 }
 
